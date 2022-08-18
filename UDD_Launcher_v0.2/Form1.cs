@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,15 +23,15 @@ namespace UDD_Launcher_v0._2
 
         public void Launch()
         {
-            //Process externalProcess = new Process();
-            //externalProcess.StartInfo.FileName = Application.StartupPath + @"\Game\Uzak_Diyar_Destanlari_2.exe";
-            //externalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
-            //externalProcess.Start();
+            Process externalProcess = new Process();
+            externalProcess.StartInfo.FileName = Application.StartupPath + @"\Game\Uzak_Diyar_Destanlari_2.exe";
+            externalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
+            externalProcess.Start();
         }
 
         public async void exitLauncher()
         {
-            await Task.Delay(90000);
+            await Task.Delay(100000);
             Application.Exit();
         }
 
@@ -61,6 +62,13 @@ namespace UDD_Launcher_v0._2
         {
             await Task.Delay(30000);
             btnExit.Visible = true;
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.FlatAppearance.BorderSize = 0;
+            btnExit.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnExit.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnExit.BackColor = Color.Transparent;
+
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)

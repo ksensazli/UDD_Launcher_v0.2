@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,34 +15,23 @@ namespace UDD_Launcher_v0._2
         private void Form1_Load(object sender, EventArgs e)
         {
             creatingBox();
+            exitControl();
             Launch();
             exitLauncher();
         }
 
         public void Launch()
         {
-            //Process externalProcess = new Process();
-            //externalProcess.StartInfo.FileName = Application.StartupPath + @"\Game\Uzak_Diyar_Destanlari_2.exe";
-            //externalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
-            //externalProcess.Start();
+            Process externalProcess = new Process();
+            externalProcess.StartInfo.FileName = Application.StartupPath + @"\Game\Uzak_Diyar_Destanlari_2.exe";
+            externalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
+            externalProcess.Start();
         }
-
-        //PROGRESS BAR!
-        //Loading yazısı düzenlenecek!
 
         public async void exitLauncher()
         {
             await Task.Delay(90000);
             Application.Exit();
-            //Process[] processes = Process.GetProcesses();
-            //foreach (var item in processes)
-            //{
-            //    if (item.MainWindowTitle == "Uzak Diyar Destanları 2: Kutsal Dönüş")
-            //    {
-            //        Console.WriteLine(item.MainWindowTitle);
-            //        Application.Exit();
-            //    }
-            //}
         }
 
         public async void creatingBox()
@@ -71,8 +54,18 @@ namespace UDD_Launcher_v0._2
                 await Task.Delay(500);
                 loadingBox3.Visible = false;
                 loadingBox.Visible = true;
-
             }
+        }
+
+        public async void exitControl()
+        {
+            await Task.Delay(30000);
+            btnExit.Visible = true;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

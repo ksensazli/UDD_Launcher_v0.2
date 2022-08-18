@@ -22,10 +22,10 @@ namespace UDD_Launcher_v0._2
 
         public void Launch()
         {
-            Process externalProcess = new Process();
-            externalProcess.StartInfo.FileName = Application.StartupPath + @"\Game\Uzak_Diyar_Destanlari_2.exe";
-            externalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
-            externalProcess.Start();
+            //Process externalProcess = new Process();
+            //externalProcess.StartInfo.FileName = Application.StartupPath + @"\Game\Uzak_Diyar_Destanlari_2.exe";
+            //externalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
+            //externalProcess.Start();
         }
 
         public async void exitLauncher()

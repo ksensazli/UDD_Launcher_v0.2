@@ -112,12 +112,13 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(765, 12);
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(756, 12);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(23, 23);
+            this.btnExit.Size = new System.Drawing.Size(32, 32);
             this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "X";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Visible = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -137,9 +138,10 @@
             this.Controls.Add(this.loadingBox);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Uzak Diyar Destanları 2: Launcher";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.loadingBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loadingBox1)).EndInit();

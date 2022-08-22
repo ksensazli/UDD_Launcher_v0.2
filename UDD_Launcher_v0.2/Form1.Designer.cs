@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.loadingBox = new System.Windows.Forms.PictureBox();
             this.loadingBox1 = new System.Windows.Forms.PictureBox();
             this.loadingBox2 = new System.Windows.Forms.PictureBox();
             this.loadingBox3 = new System.Windows.Forms.PictureBox();
             this.progressBar = new System.Windows.Forms.PictureBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.btnExit = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.loadingBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loadingBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loadingBox2)).BeginInit();
@@ -98,18 +100,6 @@
             this.progressBar.TabIndex = 5;
             this.progressBar.TabStop = false;
             // 
-            // progressBar1
-            // 
-            this.progressBar1.BackColor = System.Drawing.Color.Brown;
-            this.progressBar1.ForeColor = System.Drawing.Color.IndianRed;
-            this.progressBar1.Location = new System.Drawing.Point(265, 391);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(272, 13);
-            this.progressBar1.Step = 15;
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar1.TabIndex = 6;
-            this.progressBar1.Value = 50;
-            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
@@ -122,6 +112,15 @@
             this.btnExit.Visible = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(267, 392);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(266, 12);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar1.TabIndex = 18;
+            this.progressBar1.Value = 100;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,8 +128,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.loadingBox3);
             this.Controls.Add(this.loadingBox2);
@@ -159,8 +158,9 @@
         private System.Windows.Forms.PictureBox loadingBox2;
         private System.Windows.Forms.PictureBox loadingBox3;
         private System.Windows.Forms.PictureBox progressBar;
-        public System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
